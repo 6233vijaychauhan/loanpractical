@@ -24,7 +24,8 @@ For configuring the project please follow the below steps,
 Copy .env from the .env.example file using below command
 
 ```bash
-cp .env.example .env
+copy .env.example .env
+php artisan key:generate
 ```
 
 Go to .ENV File, Set DB_USERNAME & DB_PASSWORD of your phpmyadmin login credentials & set Database name in DB_DATABASE
@@ -62,6 +63,21 @@ php artisan serve
 
 ## API Document
 
+- **Register API (Method=POST)**
+
+```bash
+URL: http://localhost:8000/api/register
+```
+
+BODY Parameter as a formdata
+
+```bash
+name:
+email:
+password:
+c_password:
+```
+
 - **Login API (Method=POST)**
 
 ```bash
@@ -91,21 +107,6 @@ HEADERS
 ```bash
 Accept:application/json
 Authorization: Bearer {{token_value}}
-```
-
-- **Register API (Method=POST)**
-
-```bash
-URL: http://localhost:8000/api/register
-```
-
-BODY Parameter as a formdata
-
-```bash
-name:
-email:
-password:
-c_password:
 ```
 
 - **Apply Loan API (Method=POST)**

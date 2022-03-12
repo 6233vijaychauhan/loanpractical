@@ -50,6 +50,11 @@ class AuthController extends ResponseController
                 return $this->_sendErrorResponse("Please enter field is required.", $validator->messages());
             }
 
+            $isExist = User::where('email',$request->email)->first();
+            if($isExist){
+                return $this->_sendErrorResponse("User is already registered");
+            }
+
             $user = User::create([
                 'name' => $request->name,
                 'email' => $request->email,
