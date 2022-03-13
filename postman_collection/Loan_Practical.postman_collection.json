@@ -1,0 +1,285 @@
+{
+	"info": {
+		"_postman_id": "dfeb483c-847b-4869-b4d5-488a03b89d41",
+		"name": "Loan_Practical",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "customer",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "customer@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "c_password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login API",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "customer@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout API",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjkzNzQ4YzEzZjlmY2I4MTE5OWQ2OTFkZTgwNzJkNWYxYjcxOGIzMmUxM2FmZTRjYWFhYWJmYWNhYThiMDllODI0YWFjOTlkMDIxN2U2MjQiLCJpYXQiOjE2NDcxNTUzMTEsIm5iZiI6MTY0NzE1NTMxMSwiZXhwIjoxNjQ5NzQ3MzExLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.Yj3bn9yQ_Pb9-XKoWGPDZ3n-RSFKoZKecVYDdU1S3nOEl1nkVh026GF_Ncx_aR0wUgLqXD_k3Wx5oCq745kAxDqvSAYwYde-5VtI_TE4pbkSFCYxZ4-NEYptMgB8ecwufjYXIgKsDDY9Ypu9Tu7C3cuOyMBZ7UOQCbJ4cItSrkY3uv8Jyzzl1_RxL9j4EAVJQjOC28fwaZlAJkwF2OQEowwX74GSjQR_CnO6zIGXyOecwR16NcMw_yJ8v5sudRx6A5ly6mfamANjnBIUFX47ZCarZl8ATvCtDfR1zRK0nAeXGtU5WG8fEfgMwXC6ddaJhUEF7ih-ceJ_xaycxGSnRE8gUOPT8OaV6_Zo5wZrxD4BX6u56dE9CWzvy_i9HhRdC2ezEPpUmqPXZkeWvcnyIpsANAz5WDlTusWp2XXEf5iEV_m0tGaklBrsP3I18nB4IKYP-FcyJFVi6S6fswp4MWymIsMV__KWdJrRtdu0BBs5TkhsaCHNitGEQ-W3HuCczp2cfJgdUaFPQMmv_-71GfJcTOruS6_pFIo_ruHvg8wm9UhcKUJRaNzOkfa4b3IcgCSMrj9zdMtz7MWa2qoUPFDnc6q-zaNvLzTuaZ8TPg85JekjqzCE6M01zEjwoCVoGoWFqU_tM9sxiBhUA7o7i2tJMp_ogANAwpCeWBBZOEw",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Apply Loan",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDExY2M2ODk0YjFkM2U3MGM0NjRjZWJhY2EzYTNhMzNkMDJhMGY0Y2Y5ZmZhZmE3OTAxOTA4MTc5NDU1ZDRjY2FlZjZmODRlMGExMjZkMDQiLCJpYXQiOjE2NDcxNTUzOTksIm5iZiI6MTY0NzE1NTM5OSwiZXhwIjoxNjQ5NzQ3Mzk5LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.tEh7QZnqmxKRrg099KX944ldfrRXGff1ht-zzMLEN3SQgNUl3z6dbftvKQT4PhFBbJCIhik5-FT_If2aIUAwFwbJuGyJ2ot18ax1VSbmu5mhisCDVveVJJc5x0gGJkI5gAtmBTykLPDixWiPPncgnlORtRE_lzhi8vfgtxSyXfLAFUJylHavE4vdgZvIb6Y3ogfIw7d3Tgh1SKYHisfe35I1qcYpcz6f3a74lrn3il91HV46aIgTgtD7XJMBS2N5GEt0dzzPo44tMbQvhDOQOdwubkGUe5r8QHf0F4mk8seeuCrSOuCyaabjOelYiaJ8HmWZQ7A7QVLo71esdlHqbhyspnyq7cmAhGyoXsxHx05cqzlNeRVE4RuXvgRMamOLc087qpuNScvJNFH8_3tGmrszQiyhReTZ9KrQJFY2N9c04sZObD3FoG7zgUlKzS1TqpZ2LLInalM4IKyN78Lx-mx5e6AxHLm_-m4MgBdNiMYXOnaKRysRAAnFtgDL3kgRYGmpmRrxlycFQCIK_S-c-IuHAAtsGLYW61M-FIdQPyzlhJ5X7TuoL6JTGwRK_xl18_V36-3FdoD82Mk22AsE_1fsG5ixvhcRcvuX1DOO3iBN5o4Y9CtAPV62l39ovO8S1QUrSvaF7iPCG4-rGxUFv_KduIeugaQmEmIjX7OkdSc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "amount",
+							"value": "10000",
+							"type": "text"
+						},
+						{
+							"key": "loan_term",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/loan_store",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"loan_store"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Loan Details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDExY2M2ODk0YjFkM2U3MGM0NjRjZWJhY2EzYTNhMzNkMDJhMGY0Y2Y5ZmZhZmE3OTAxOTA4MTc5NDU1ZDRjY2FlZjZmODRlMGExMjZkMDQiLCJpYXQiOjE2NDcxNTUzOTksIm5iZiI6MTY0NzE1NTM5OSwiZXhwIjoxNjQ5NzQ3Mzk5LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.tEh7QZnqmxKRrg099KX944ldfrRXGff1ht-zzMLEN3SQgNUl3z6dbftvKQT4PhFBbJCIhik5-FT_If2aIUAwFwbJuGyJ2ot18ax1VSbmu5mhisCDVveVJJc5x0gGJkI5gAtmBTykLPDixWiPPncgnlORtRE_lzhi8vfgtxSyXfLAFUJylHavE4vdgZvIb6Y3ogfIw7d3Tgh1SKYHisfe35I1qcYpcz6f3a74lrn3il91HV46aIgTgtD7XJMBS2N5GEt0dzzPo44tMbQvhDOQOdwubkGUe5r8QHf0F4mk8seeuCrSOuCyaabjOelYiaJ8HmWZQ7A7QVLo71esdlHqbhyspnyq7cmAhGyoXsxHx05cqzlNeRVE4RuXvgRMamOLc087qpuNScvJNFH8_3tGmrszQiyhReTZ9KrQJFY2N9c04sZObD3FoG7zgUlKzS1TqpZ2LLInalM4IKyN78Lx-mx5e6AxHLm_-m4MgBdNiMYXOnaKRysRAAnFtgDL3kgRYGmpmRrxlycFQCIK_S-c-IuHAAtsGLYW61M-FIdQPyzlhJ5X7TuoL6JTGwRK_xl18_V36-3FdoD82Mk22AsE_1fsG5ixvhcRcvuX1DOO3iBN5o4Y9CtAPV62l39ovO8S1QUrSvaF7iPCG4-rGxUFv_KduIeugaQmEmIjX7OkdSc",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/show_loan_details/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"show_loan_details",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Approval Loan By Admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiN2E2NGFlZGRiNWFhOWExOTNhNzNhZTljNTJkOTI4MjI0NWJkZDRjNjZlNGYzN2JjMTU2YmNlNzE5NDNmNDdlYWE3NWEwY2VmMTk5OGIzNjAiLCJpYXQiOjE2NDcxNTU0ODUsIm5iZiI6MTY0NzE1NTQ4NSwiZXhwIjoxNjQ5NzQ3NDg1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.LfG53fX7rB8vHzl1Cvt5b8GmcBlSQyTUbNFroUCZ4xblbHkW5oiktbJfBqd85HL2zaDIJuDksRUfXiDGhePKG_rZRSWS4ufaRsz3yP10GLZrdNr5q1rZJFDFeIpgQkEBNKVeE2UZyD7Dw7ZTJUO85mdlSxkkuSXoyWyZyYauP8DOR75LO2Vi793ARsJwYbObOzxyrXJA0QahwZG5rmeSvb1ka4Zd8_meA9npkMARz7uwUddGasmqv7pKpbVdFOa8StXSbBlGHsv2z8tRoHK5KjenhuyV2gRw_vaAk_0n_581MkAGwhWdkyCAz4KAJbPlOo3SzrzKYhY1ectbONL7PWB-A897wo-12l6qz_EHQe-0oBfp-QR6bCac917knNloM0lXGcF-B2P6i4PfmwptyQmTSiPgnaTDOtYApT9WQ2TwWDQpcuuWGHE4CbEh_EKBJ8ZzWAyJ9sRRo4WH2NWt6bkdu1gpb6W-AbIiTCbyPezRTJo6Olr1qt3WUNLwBlK7BjD__5RZzGnGN45ucZBMbwrNo_SJjD0QU_m1FifuCHy9R-oFHDSY2fDemKho8yqiViZRFPBW8I1hpmEZDDbEBBpaK_E5m_YTHokiBhQDEpyr3GVIxZPalYz7lLtBp7otIEBoXFjjM41PZDJduJE3tH-C0YHL1NzjG4_Ic63ZdqU",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/javascript",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "loan_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/approval_loan_by_admin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"approval_loan_by_admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pay Loan",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMWI0MjUyY2IyZTBjZTMzZTA2ZmFhOTQxNGE5YzJkYjRmMWUzODkwNDMxMDgyNzY4ZTkwNzViMmZjZGYxZGM2M2EzMjhjNGViMDM4YzgxNTIiLCJpYXQiOjE2NDcxNTU1MTYsIm5iZiI6MTY0NzE1NTUxNiwiZXhwIjoxNjQ5NzQ3NTE2LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.NXpY5Q9oTR1Of_Thb7wcPJboe6OT4dzGu9xsg6mcX5P7TC0w_BcxdjYPPQ_vtdL67-ideTHMzN2tK2zTdXsjMPIuH1GhIW4WXAgICnhxQsVMrPWCflIZ8nT70SFJ_YQ2wu73cATN9cJ_CZxpL2N8prEN9E_BEUc11Qp8m1lkKNY-xkywQV_d10HO0vIW9UOR5BYlqo735xi0s3A3S1USoF35mJqmuzgrGl0mrKG7rSH7yB9O-2osFbAKEWMXBs6gfIECiAB-zwWxIRzlMGgJC6bLIAPRkHjLP3bFyVincWfRMub3Unj1YusJECpDAjcqKIt2zgLvRJ8WVOH5s12o06EtZiP4KWmeEkQo61uExfs1-ZMPZ-vbk1RbmRodf2ReLCMveDoBp7vygwoan7Xhon-3tGEXOmucooNOftrWHAG0dfeZqTbnLSAvFj9D5f3daK-jwCjtfvc0cPxbNWMXGEpajLlmJ9Vl7y2ekOmbWjBzt4MZBaPPIrZpj1TVPtEj9F5KTOtFGixeckJDzkAvvWAXmbeOwhMwdDxaBjrMLERlEdMbIKVYJy7gOSfxFxyIUGrgiJSSvHCHZXi7scTTI7VvPlDr52DMb33Si2pVs_Bv-9cgRYrN1SZy4PXO77HWEOc391-au5Yc4Vd9s1MNxznpxs6K2Ac7OHVqJs9eA7A",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "loan_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "3333.34",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/paid_loan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"paid_loan"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
